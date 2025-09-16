@@ -1,0 +1,10 @@
+services:
+  distributedmatrixapp.server:
+    image: ${DOCKER_REGISTRY-}distributedmatrixappserver
+    build:
+      context: .
+      dockerfile: DistributedMatrixApp.Server/Dockerfile
+    container_name: matrix-server
+    ports:
+      - "8000:8000" 
+      - "9000:9000" 
